@@ -1,0 +1,292 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,600);
+
+body{
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.card
+{
+   background-image: url("https://www.pexels.com/photo/medical-stethoscope-and-mask-composed-with-red-foiled-chocolate-hearts-4386466/");
+height:100%;
+margin-bottom:10px;
+}
+
+.container
+{
+   }
+    .container button
+    {
+    margin: 5px 10px 5px 0;
+      padding: 10px 20px;
+      background-color: dodgerblue;
+      border: 5px solid #ddd;
+      color: white;
+      cursor: pointer;
+    }
+    .container button:hover {
+      background-color: green;
+    }
+    .aaa
+    {
+    }
+
+.card-body
+{
+border: 0px solid;
+text-align: center;
+margin-top: 100px;
+margin-bottom: 0px;
+margin-right: 0px;
+margin-left: 0px;
+border-radius: 0px;
+}
+table {
+margin-top:0px;
+  background:#c8e8e0;
+  border-radius: 0em;
+    border-color:blue;
+  border-collapse: separate;
+  margin: 0em;
+  }
+
+
+  th {
+      border: 1px solid silver;
+      background:black;
+      color: #ffffff;
+      font-size: 0.85em;
+      font-weight: 1000;
+      padding: 0.5em 1em;
+      text-align: left;
+      font-family:sans-serif;
+
+    }
+#nav {
+    position: relative;
+    left: -90px;
+    background-color: #777777; /*Whatever color you want goes here, but in Hexadecimal form*/
+    color: #1122cc; /*The color of your font also goes here, but in hexadecimal form*/
+}
+  tr:nth-child(odd) {
+  background:linear-gradient(45deg, #49a09d, #5f2c82);
+  }
+  tr:nth-child(even) {
+   background:linear-gradient(45deg, #49a09d, #5f2c82) ;
+   }
+
+
+  td {
+    color: white;
+    font-weight: 500;
+    padding: 0.65em 1em;
+    border: 1px solid black;
+    font-family:sans-serif;
+  }
+
+  td:hover
+  {
+  color:white;
+  }
+
+  .disabled td {
+    color: #4F5F64;
+  }
+  tbody tr {
+    transition: background 0.25s ease;
+    border:2px solid silver;
+  }
+  tbody tr:hover {
+    background:silver ;
+  }
+  .navbar navbar-expand-lg navbar-light bg-light
+.nav-item
+{
+background-color:#ffffbf;
+ border: 2px solid #CD5C5C;
+   padding: 10px 20px;
+
+}
+.navbar-toggler-icon
+{
+background-color:linear-gradient(45deg, #49a09d, #5f2c82);;}
+
+.nav-item:hover
+{
+color:green;
+border:5px solid white;
+}
+.navbar navbar-expand-lg navbar-light bg-light
+{
+margin-top:100px;
+background-color:pink;
+}
+
+. button
+{
+  padding: 10px 20px;
+  background-color: dodgerblue;
+  border: 5px solid #CD5C5C	;
+  color: white;
+  cursor: pointer;
+}
+
+.item
+{
+margin-top:10px;
+margin-bottom:10px;
+background-color:#ffffbf;
+border: 5px solid #CD5C5C	;
+border-radius:25px;
+}
+
+.sidebar{
+width: 20%;
+background:linear-gradient(120deg, #a6c0fe 0%, #f68084 100%);
+height:100%;
+position:fixed;
+padding-top:100px;
+border-right:5px solid silver;
+}
+
+@media only screen and (max-width: 600px) {
+	.sidebar {
+		display: none;
+		width: 80% !important;
+		background:yellow;
+		height: 100vh;
+		position: fixed;
+		padding-top: 20px;
+	}
+	.content {
+		margin-left: 0% !important;
+	}
+}
+
+.sidebar a {
+	display: block;
+	width: 100%;
+	padding: 10px 25px;
+	text-decoration: none;
+	color: black;
+}
+
+.sidebar a:hover {
+	background: silver;
+}
+
+.sidebar .divider {
+	height: .5px;
+	width: 100%;
+	background: #e2e2e2;
+	margin-top: 20px;
+}
+.sidebar .crossBtn{
+	background-color: #0f2235;
+	position: absolute;
+	top: 0;
+	right: 35px;
+	font-size: 36px;
+	cursor: pointer;
+}
+.sidebar .crossBtn:hover
+{
+font-color:white;
+}
+.content{
+margin-left:20%;
+}
+.center {
+    border: 2px solid #CD5C5C;
+    background-color:#f0e68c ;
+    text-align: center;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    margin-right: 400px;
+    margin-left: 400px;
+    border-radius:20px;
+}
+
+
+
+.center_homepage {
+border: 5px solid black;
+text-align: center;
+background-image: url("https://cdn5.vectorstock.com/i/1000x1000/20/99/doctors-and-patients-cartoon-in-front-hospital-vector-27042099.jpg");
+  margin-top: 10px;
+  margin-bottom: 0px;
+  margin-right: 0px;
+  margin-left: 0px;
+}
+.my-card{
+background-color:#f0e68c;
+border-radius:50px;
+border: 2px solid #CD5C5C;
+text-align: center;
+  margin-top: 100px;
+  margin-bottom: 10px;
+  margin-right: 0px;
+  margin-left: 0px;
+  }
+.form-inline button {
+  padding: 10px 20px;
+  background-color: dodgerblue;
+  border: 5px solid #CD5C5C	;
+  color: white;
+  cursor: pointer;
+}
+.form-inline label {
+  margin: 5px 10px 5px 5px;
+}
+
+.form-inline input {
+  vertical-align: middle;
+  margin: 5px 10px 5px 5px;
+  padding: 10px;
+  background-color: #fff;
+  border: 3px solid #CD5C5C	;
+  border-radius:10px;
+}
+.input-group input {
+  vertical-align: middle;
+  margin: 5px 15px 5px 0;
+  padding: 10px;
+  background-color: #ffe4e1;
+  border: 3px solid #CD5C5C	;
+  border-radius:50px;
+}
+
+.form-inline button {
+  margin: 5px 10px 5px 0;
+
+  padding: 10px 20px;
+  background-color: dodgerblue;
+  border: 5px solid #ddd;
+  color: white;
+  cursor: pointer;
+}
+
+.form-inline button:hover {
+  background-color: green;
+}
+
+@media (max-width: 800px) {
+  .form-inline input {
+    margin: 10px 0;
+  }
+
+  .form-inline {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .input-group {
+      flex-direction: column;
+      align-items: stretch;
+    }
+
+@media (max-width: 800px) {
+    .input-group input {
+        margin: 10px 0;
+    }
+}}
+
+

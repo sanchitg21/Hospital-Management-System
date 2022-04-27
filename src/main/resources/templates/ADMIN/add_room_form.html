@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="ADMIN/base::layout(~{::section})">
+<head>
+    <meta charset="UTF-8">
+    <title>home page</title>
+</head>
+<body>
+<section>
+    <!--    THIS SECTION IS IMP-->
+ <div class="card">
+     <div class="card-body">
+         <h1 class="text-center"> ADD ROOM</h1>
+
+         <div class="container-fluid mt-1">
+             <div class="row">
+                 <div class="offset-md-1 col-md-10">
+                     <form action="#"
+                         th:object="${room}"
+                           enctype="multipart/form-data"
+                           method="POST"
+                           th:action="@{'/admin/process-room/'+${staff.name}}"
+                           class="mt-2"
+                     >
+
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text mr-3">
+
+                                </div>
+                            </div>
+                            <input type="text" name="roomtype" id="roomtype" placeholder="ENTER ROOM TYPE" class="form-control"/>
+                        </div>
+
+                         <div class="input-group">
+                             <div class="input-group-prepend">
+                                 <div class="input-group-text mr-3">
+
+                                 </div>
+                             </div>
+                             <input type="text" name="charge" id="charge" placeholder="ENTER PRICE" class="form-control"/>
+                         </div>
+
+
+                         <div class="input-group">
+                             <div class="input-group-prepend">
+                                 <div class="input-group-text mr-3">
+
+                                 </div>
+                             </div>
+                             <input type="text" name="maxoccup" id="maxoccup" placeholder="ENTER MAXIMUM OCCUPANCY" class="form-control"/>
+                         </div>
+
+
+ <div class="container">
+     <button>SAVE ROOM</button>
+ </div>
+
+
+                     </form>
+                 </div>
+             </div>
+         </div>
+     </div>
+ </div>
+
+
+
+</section>
+
+</body>
+</html>

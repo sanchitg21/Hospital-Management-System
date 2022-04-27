@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="DOCTOR/base::layout(~{::section})">
+<head>
+    <meta charset="UTF-8">
+    <title>home page</title>
+</head>
+<body>
+<section>
+    <!--    THIS SECTION IS IMP-->
+ <div class="card">
+     <div class="card-body">
+         <h1 class="text-center">PATIENTS</h1>
+
+         <table class="table">
+               <thead>
+             <tr>
+                 <th scope="col">PATIENT ID</th>
+                 <th scope="col">NAME</th>
+                 <th scope="col">DOB</th>
+                 <th scope="col">GENDER</th>
+                 <th scope="col">BLOODGROUP</th>
+                 <th scope="col">MOBILE NUMBER</th>
+                 <th scope="col">ACTION</th>
+             </tr>
+             </thead>
+
+
+             <tbody>
+             <tr th:each="p : ${patients}">
+                 <th scope="row" th:text="'DSNL2022'+${p.patientid}">1</th>
+                 <td th:text="${p.name}">Mark</td>
+                 <td th:text="${p.DOB}">Otto</td>
+                 <td th:text="${p.gender}">@mdo</td>
+                 <td th:text="${p.bloodgroup}">Otto</td>
+                 <td th:text="${p.mobileNo}">@mdo</td>
+                 <td>
+                     <a th:href="@{'/staff/show-patients/'+${staff.name} + '/deletepatient/' + ${p.name} }" class="btn btn-danger btn-sm">DELETE</a>
+                     <a th:href="@{'/staff/show-patients/'+${staff.name} + '/updatepatient/' + ${p.name} }" class="btn btn-warning btn-sm">UPDATE</a>
+                 </td>
+             </tr>
+
+             </tbody>
+         </table>
+     </div>
+ </div>
+
+
+</section>
+
+</body>
+</html>

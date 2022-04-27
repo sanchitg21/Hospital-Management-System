@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="PATIENT/base::layout(~{::section})">
+<head>
+    <meta charset="UTF-8">
+    <title>home page</title>
+</head>
+<body>
+<section>
+    <!--    THIS SECTION IS IMP-->
+    <div class="card">
+        <div class="card-body">
+            <h1 class="text-center">MEDICAL ACCESSORIES IN THE CATALOGUE</h1>
+
+            <table class="table">
+                <thead>
+                <tr>
+                    <th scope="col">ACCESSORY ID</th>
+                    <th scope="col">ACCESSORY NAME</th>
+                    <th scope="col">ACCESSORY QUANTITY</th>
+
+
+                </tr>
+                </thead>
+
+
+                <tbody>
+                <tr th:each="c : ${catalogues}">
+                    <th scope="row" th:text="'DSNLHMS'+${c.accessID}">1</th>
+                    <td th:text="${c.accessName}">Mark</td>
+                    <td th:text="${c.quantity}">Otto</td>
+
+
+                </tr>
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+
+</section>
+
+</body>
+</html>

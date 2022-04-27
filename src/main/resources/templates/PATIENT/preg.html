@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="base::layout(~{::section})">
+<head>
+    <meta charset="UTF-8">
+    <title>home page</title>
+</head>
+<body>
+<section>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 offset-md-2">
+                <div class="my-card">
+                    <h1 class="text-center">REGISTER HERE</h1>
+
+                    <form class="form-inline" action="" th:action="@{/dopreg}" method="POST" th:object="${patient}">
+
+                        <div class="form-group">
+                            <label for="name">NAME</label>
+                            <input name="name" type="text" class="form-control" id="name" aria-describedby="emailHelp" placeholder="Enter name" th:value="${patient.name}">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="gen">GENDER</label>
+                            <input name="gender" type="text" class="form-control" id="gen" aria-describedby="emailHelp" placeholder="Enter gender" th:value="${patient.gender}">
+                        </div>
+                        <div class="form-group">
+                            <label for="bg">BLOOD GROUP</label>
+                            <input name="bloodgroup" type="text" class="form-control" id="bg" aria-describedby="emailHelp" placeholder="Enter designation" th:value="${patient.bloodgroup}">
+                        </div>
+                        <div class="form-group">
+                            <label for="dob">DATE OF BIRTH</label>
+                            <input  name="DOB" type="text" class="form-control" id="dob" aria-describedby="emailHelp" placeholder="Enter DOB(yyyy-mm-dd)" th:value="${patient.DOB}">
+                        </div>
+                        <div class="form-group">
+                            <label for="phn">MOBILE</label>
+                            <input name="mobileNo" type="text" class="form-control" id="phn" aria-describedby="emailHelp" placeholder="Enter mobile number" th:value="${patient.mobileNo}">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="pwd">PASSWORD</label>
+                            <input name="password" type="text" class="form-control" id="pwd" aria-describedby="emailHelp" placeholder="Enter password" th:value="${patient.password}">
+                        </div>
+
+                        <div class="container">
+                            <button type="submit" class="btn-btn-primary">
+                                SUBMIT
+                            </button>
+                        </div>
+                    </form>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+
+</section>
+
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="ADMIN/base::layout(~{::section})">
+<head>
+    <meta charset="UTF-8">
+    <title>home page</title>
+</head>
+<body>
+<section>
+    <!--    THIS SECTION IS IMP-->
+ <div class="card">
+     <div class="card-body">
+         <h1 class="text-center">STAFF DETAILS</h1>
+
+         <table class="table">
+               <thead>
+             <tr>
+                 <th scope="col">STAFF ID</th>
+                 <th scope="col">NAME</th>
+                 <th scope="col">DOB</th>
+                 <th scope="col">DEPARTMENT</th>
+                 <th scope="col">DESIGNATION</th>
+                 <th scope="col">MOBILE NUMBER</th>
+                 <th scope="col">ACTION</th>
+             </tr>
+             </thead>
+
+
+             <tbody>
+             <tr th:each="s : ${staffs}">
+                 <th scope="row" th:text="'DSNL2022'+${s.staffid}">1</th>
+                 <td th:text="${s.name}">Mark</td>
+                 <td th:text="${s.DOB}">Otto</td>
+                 <td th:text="${s.department}">@mdo</td>
+                 <td th:text="${s.designation}">Otto</td>
+                 <td th:text="${s.mobileno}">@mdo</td>
+                 <td>
+                     <a th:href="@{'/admin/show-staff/DSNL/deletestaff/'+${s.name}}" class="btn btn-danger btn-sm">DELETE</a>
+                     <a th:href="@{'/admin/show-staff/DSNL/updatestaff/'+${s.name}}" class="btn btn-warning btn-sm">UPDATE</a>
+                 </td>
+             </tr>
+
+             </tbody>
+         </table>
+     </div>
+ </div>
+
+
+</section>
+
+</body>
+</html>

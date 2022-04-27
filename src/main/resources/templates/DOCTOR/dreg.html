@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="base::layout(~{::section})">
+<head>
+    <meta charset="UTF-8">
+    <title>home page</title>
+</head>
+<body>
+<section>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 offset-md-2">
+                    <div class="my-card">
+                        <h1 class="text-center">REGISTER HERE</h1>
+
+                        <form  class="form-inline"action="" th:action="@{/dodreg}" method="POST" th:object="${staff}">
+
+                            <div class="form-group">
+                                <label for="name">NAME</label>
+                                <input name="name" type="text" class="form-control" id="name" aria-describedby="emailHelp" placeholder="Enter name" th:value="${staff.name}">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="dep">DEPARTMENT</label>
+                                <input name="department" type="text" class="form-control" id="dep" aria-describedby="emailHelp" placeholder="Enter department" th:value="${staff.department}">
+                            </div>
+                            <div class="form-group">
+                                <label for="des">DESIGNATION</label>
+                                <input name="designation" type="text" class="form-control" id="des" aria-describedby="emailHelp" placeholder="Enter designation" th:value="${staff.designation}">
+                            </div>
+                            <div class="form-group">
+                                <label for="dob">DATE OF BIRTH</label>
+                                <input  name="DOB" type="text" class="form-control" id="dob" aria-describedby="emailHelp" placeholder="Enter DOB(yyyy-mm-dd)" th:value="${staff.DOB}">
+                            </div>
+                            <div class="form-group">
+                                <label for="phn">MOBILE</label>
+                                <input name="mobileno" type="text" class="form-control" id="phn" aria-describedby="emailHelp" placeholder="Enter mobile number" th:value="${staff.mobileno}">
+                            </div>
+                            <div class="form-group">
+                                <label for="sal">SALARY</label>
+                                <input name="salary" type="number" class="form-control" id="sal" aria-describedby="emailHelp" placeholder="Enter salary" th:value="${staff.salary}">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="pwd">PASSWORD</label>
+                                <input name="password" type="text" class="form-control" id="pwd" aria-describedby="emailHelp" placeholder="Enter password" th:value="${staff.password}">
+                            </div>
+
+
+                            <div class="container">
+                                <button type="submit" class="btn-btn-primary">
+                                    SUBMIT
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+
+
+</section>
+
+</body>
+</html>

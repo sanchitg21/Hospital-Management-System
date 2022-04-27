@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="ADMIN/base::layout(~{::section})">
+<head>
+    <meta charset="UTF-8">
+    <title>home page</title>
+</head>
+<body>
+<section>
+    <!--    THIS SECTION IS IMP-->
+ <div class="card">
+     <div class="card-body">
+         <h1 class="text-center"> ADD CATALOGUE</h1>
+
+         <div class="container-fluid mt-1">
+             <div class="row">
+                 <div class="offset-md-1 col-md-10">
+                     <form action="#"
+                         th:object="${catalogue}"
+                           enctype="multipart/form-data"
+                           method="POST"
+                           th:action="@{'/admin/process-catalogue/'+${staff.name}}"
+                           class="mt-2"
+                     >
+
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <div class="input-group-text mr-3">
+
+                                </div>
+                            </div>
+                            <input type="text" name="accessName" id="accessName" placeholder="ENTER ACCESSORY NAME" class="form-control"/>
+                        </div>
+
+                         <div class="input-group">
+                             <div class="input-group-prepend">
+                                 <div class="input-group-text mr-3">
+
+                                 </div>
+                             </div>
+                             <input type="text" name="quantity" id="quantity" placeholder="ENTER ACCESSORY QUANTITY" class="form-control"/>
+                         </div>
+
+
+
+
+ <div class="container">
+     <button>SAVE ACCESSORY</button>
+ </div>
+
+
+                     </form>
+                 </div>
+             </div>
+         </div>
+     </div>
+ </div>
+
+
+
+</section>
+
+</body>
+</html>

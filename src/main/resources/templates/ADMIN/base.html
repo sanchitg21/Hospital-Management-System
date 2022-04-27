@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:fragment="layout(content)">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+    <title>ADMIN DASHBOARD</title>
+    <link rel="icon" href="https://lh3.googleusercontent.com/3y9vR82DCS6SW78XW9P6jCnntK6kpegDabVTDNJ-7wwOo1pGZkFPnRhwNmIo1OK6prI3bg=s85" type="image/png">
+
+</head>
+<body>
+
+<nav class=" navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <a class="navbar-brand" href="#">DSNL ADMIN DASHBOARD </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto w-100 justify-content-end">
+<!--            <li class="nav-item active">-->
+<!--                <a class="nav-link" th:href="@{/godoptions}"  href="#">OPTIONS <span class="sr-only"></span></a>-->
+<!--            </li>-->
+            <li class="nav-item">
+                <a class="nav-link"  th:href="@{/home}" href="#"><i class="fa fa-home" aria-hidden="true"></i>HOME</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="#"><span th:text="${staff.name}"></span></a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" th:href="@{/logout}" href="#"><i class="fas fa-sign-out-alt"></i>LOGOUT</a>
+            </li>
+        </ul>
+<!--        <form class="form-inline my-2 my-lg-0">-->
+<!--            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">-->
+<!--            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>-->
+<!--        </form>-->
+    </div>
+</nav>
+
+<div class="sidebar">
+    <span class="crossBtn">&times;</span>
+    <a href="#" th:href="@{'/admin/index/'+${staff.name}}" class="item">HOME</a>
+    <a href="#" th:href="@{'/admin/profile/'+${staff.name}}" class="item">YOUR PROFILE</a>
+    <a href="#" th:href="@{'/admin/show-patients/'+${staff.name}}" class="item">VIEW PATIENTS</a>
+    <a href="#" th:href="@{'/admin/show-rooms/'+${staff.name}}" class="item">VIEW ROOMS</a>
+    <a href="#" th:href="@{'/admin/add-room/'+${staff.name}}" class="item">ADD ROOMS</a>
+    <a href="#" th:href="@{'/admin/show-staff/'+${staff.name}}" class="item">VIEW STAFF</a>
+    <a href="#" th:href="@{'/admin/add-staff/'+${staff.name}}" class="item">ADD STAFF</a>
+    <a href="#" th:href="@{'/admin/show-catalogue/'+${staff.name}}" class="item">VIEW AVAILABLE MEDICAL ACCESSORIES IN THE INVENTORY</a>
+    <a href="#" th:href="@{'/admin/add-catalogue/'+${staff.name}}" class="item">ADD MEDICAL ACCESSORIES IN THE INVENTORY</a>
+
+</div>
+
+<div class="content">
+
+    <div th:replace="${content}"></div>
+
+</div>
+
+
+
+
+<!-- Optional JavaScript; choose one of the two! -->
+
+<!-- Option 1: Bootstrap Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+<!-- Option 2: Separate Popper and Bootstrap JS -->
+<!--
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+-->
+<script th:src="@{/js/script.js}"></script>
+</body>
+</html>

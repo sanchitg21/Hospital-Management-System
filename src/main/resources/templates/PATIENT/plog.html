@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="base::layout(~{::section})">
+<head>
+    <meta charset="UTF-8">
+    <title>home page</title>
+</head>
+<body>
+<section>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 offset-md-2">
+                <div class="my-card">
+                    <h1 class="text-center">LOGIN HERE</h1>
+                    <form class="form-inline" action="" th:action="@{/doplog}" method="POST" th:object="${patient}">
+
+                        <div class="form-group">
+                            <label for="name">NAME</label>
+                            <input name="name" type="text" class="form-control" id="name" aria-describedby="emailHelp" placeholder="Enter name" >
+                        </div>
+                        <div class="form-group">
+                            <label for="pwd">PASSWORD</label>
+                            <input name="password" type="text" class="form-control" id="pwd" aria-describedby="emailHelp" placeholder="Enter password">
+                        </div>
+
+                        <div class="container">
+                            <button type="submit" class="btn-btn-primary">
+                                SUBMIT
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+</body>
+</html>

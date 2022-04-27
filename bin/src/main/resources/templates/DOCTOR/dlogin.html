@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="base::layout(~{::section})">
+<head>
+    <meta charset="UTF-8">
+    <title>home page</title>
+</head>
+<body>
+<section>
+   <h1> choose - login or register</h1>
+    <form class="login-form">
+        <p class="message">Not registered? <a th:href="@{/dreg}">Create an account</a></p>
+        <p class="message">Are you a Doctor? <a th:href="@{/dlog}">Login here</a></p>
+    </form>
+</section>
+
+</body>
+</html>

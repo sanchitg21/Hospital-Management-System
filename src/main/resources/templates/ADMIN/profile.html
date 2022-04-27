@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="ADMIN/base::layout(~{::section})">
+<head>
+    <meta charset="UTF-8">
+    <title>home page</title>
+</head>
+<body>
+<section>
+    <!--    THIS SECTION IS IMP-->
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        .column {
+            float: left;
+            width: 50%;
+            padding: 5px;
+        }
+
+        .row::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+    </style>
+    <div class="row">
+        <div class="column">
+            <img src="https://www.dynodesoft.com/assets/img/project-manager-openings.gif"
+                 style="object-fit: cover" alt="Welcome to STAFF DASHBOARD"/>
+        </div>
+        <div class="column">
+            <img src="https://www.dynodesoft.com/assets/img/f93e46d78b.gif"
+                 style="object-fit: cover" alt="Welcome to STAFF DASHBOARD"/>
+        </div>
+    </div>
+    <div class="container">
+<div class="card">
+    <div class="card-body">
+
+
+    <table class="table">
+        <thead>
+        <tr>
+            <th scope="col">ADMIN ID</th>
+            <th scope="col">DSNL2022<span th:text="${staff.staffid}"></span></th>
+        </tr>
+        </thead>
+        <tbody>
+          <tr>
+              <th scope="row">ADMIN NAME</th>
+              <td><span th:text="${staff.name}"></span></td>
+          </tr>
+
+          <tr>
+              <th scope="row">ADMIN DOB</th>
+              <td><span th:text="${staff.DOB}"></span></td>
+          </tr>
+
+          <tr>
+              <th scope="row">ADMIN MOBILE NUMBER </th>
+              <td><span th:text="${staff.mobileno}"></span></td>
+          </tr>
+
+          <tr>
+              <th scope="row">ADMIN DESIGNATION</th>
+              <td><span th:text="${staff.designation}"></span></td>
+          </tr>
+
+          <tr>
+              <th scope="row">ADMIN DEPARTMENT</th>
+              <td><span th:text="${staff.department}"></span></td>
+          </tr>
+
+          <tr>
+              <th scope="row">ADMIN SALARY</th>
+              <td><span th:text="${staff.salary}"></span></td>
+          </tr>
+
+
+        </tbody>
+    </table>
+</div>
+    </div>
+</div>
+
+</section>
+
+</body>
+</html>

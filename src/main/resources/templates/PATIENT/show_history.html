@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="PATIENT/base::layout(~{::section})">
+<head>
+    <meta charset="UTF-8">
+    <title>home page</title>
+</head>
+<body>
+<section>
+    <!--    THIS SECTION IS IMP-->
+    <div class="card">
+        <div class="card-body">
+            <h1 class="text-center">YOUR VISIT HISTORY</h1>
+
+            <table class="table">
+                <thead>
+                <tr>
+                    <th scope="col">REPORT ID</th>
+                    <th scope="col">DISEASE</th>
+                    <th scope="col">PULSE</th>
+                    <th scope="col">BLOOD PRESSURE</th>
+                    <th scope="col">TEMPERATURE</th>
+                    <th scope="col">WEIGHT</th>
+                    <th scope="col">IN PATIENT IN DATE</th>
+                    <th scope="col">IN PATIENT OUT DATE</th>
+                    <th scope="col">OUT PATIENT DATE</th>
+                    <th scope="col">BILL ID</th>
+                    <th scope="col">TREATMENT CHARGES</th>
+                    <th scope="col">MEDICINE CHARGES</th>
+                    <th scope="col">ROOM CHARGES</th>
+                    <th scope="col">PRESCRIPTION</th>
+                    <th scope="col">TREATMENT</th>
+                </tr>
+                </thead>
+
+
+                <tbody>
+                <tr th:each="m : ${medicalreports}">
+                    <th scope="row" th:text="${m.reportid}">1</th>
+                    <td th:text="${m.disease}">Mark</td>
+                    <td th:text="${m.pulse}">Otto</td>
+                    <td th:text="${m.bp}">@mdo</td>
+                    <td th:text="${m.temp}">Otto</td>
+                    <td th:text="${m.weight}">@mdo</td>
+
+                    <td th:text="${m.iindate}">@mdo</td>
+                    <td th:text="${m.oindate}">Otto</td>
+                    <td th:text="${m.odate}">@mdo</td>
+
+                    <td th:text="${m.billno}">Mark</td>
+                    <td th:text="${m.treatcharges}">Otto</td>
+                    <td th:text="${m.medcharges}">@mdo</td>
+                    <td th:text="${m.roomcharges}">Otto</td>
+                    <td th:text="${m.prescription}">@mdo</td>
+                    <td th:text="${m.treatment}">@mdo</td>
+
+                </tr>
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+
+</section>
+
+</body>
+</html>

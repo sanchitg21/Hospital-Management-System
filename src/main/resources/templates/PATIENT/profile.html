@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="PATIENT/base::layout(~{::section})">
+<head>
+    <meta charset="UTF-8">
+    <title>home page</title>
+</head>
+<body>
+<section><!--    THIS SECTION IS IMP-->
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        .column {
+            float: left;
+            width: 50%;
+            padding: 5px;
+        }
+
+        .row::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+    </style>
+    <div class="row">
+        <div class="column">
+            <img src="https://www.dynodesoft.com/assets/img/project-manager-openings.gif"
+                 style="object-fit: cover" alt="Welcome to STAFF DASHBOARD"/>
+        </div>
+        <div class="column">
+            <img src="https://www.dynodesoft.com/assets/img/f93e46d78b.gif"
+                 style="object-fit: cover" alt="Welcome to STAFF DASHBOARD"/>
+        </div>
+    </div>
+      <div class="card">
+    <div class="card-body">
+        <table class="table">
+        <thead>
+        <tr>
+            <th scope="col">PATIENT ID</th>
+            <th scope="col">DSNL2022<span th:text="${patient.patientid}"></span></th>
+        </tr>
+        </thead>
+        <tbody>
+          <tr>
+              <th scope="row">PATIENT NAME</th>
+              <td><span th:text="${patient.name}"></span></td>
+          </tr>
+
+          <tr>
+              <th scope="row">PATIENT DOB</th>
+              <td><span th:text="${patient.DOB}"></span></td>
+          </tr>
+
+          <tr>
+              <th scope="row">PATIENT MOBILE NUMBER </th>
+              <td><span th:text="${patient.mobileNo}"></span></td>
+          </tr>
+
+          <tr>
+              <th scope="row">PATIENT GENDER</th>
+              <td><span th:text="${patient.gender}"></span></td>
+          </tr>
+
+          <tr>
+              <th scope="row">PATIENT BLOODGROUP</th>
+              <td><span th:text="${patient.bloodgroup}"></span></td>
+          </tr>
+
+
+        </tbody>
+        </table>
+    </div>
+</div>
+
+</section>
+
+</body>
+</html>

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="DOCTOR/base::layout(~{::section})">
+<head>
+    <meta charset="UTF-8">
+    <title>home page</title>
+</head>
+<body>
+<section>
+    <!--    THIS SECTION IS IMP-->
+    <div class="card">
+        <div class="card-body">
+            <h1 class="text-center"> ADD MEDICAL REPORT AND BILL </h1>
+
+            <div class="container-fluid mt-1">
+                <div class="row">
+                    <div class="offset-md-1 col-md-10">
+                        <form action="#"
+                              th:object="${medicalreport}"
+                              enctype="multipart/form-data"
+                              method="POST"
+                              th:action="@{'/staff/process-medrepandbill/'+${staff.name}}"
+                              class="mt-2"
+                        >
+
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text mr-3">
+
+                                    </div>
+                                </div>
+                                <input type="text" name="disease" required id="disease" placeholder="ENTER DISEASE" class="form-control"/>
+                            </div>
+
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text mr-3">
+
+                                    </div>
+                                </div>
+                                <input type="text" name="pulse" required id="pulse" placeholder="ENTER PULSE" class="form-control"/>
+                            </div>
+
+
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text mr-3">
+
+                                    </div>
+                                </div>
+                                <input type="text" name="bp" required id="bp" placeholder="ENTER BLOOD PRESSURE" class="form-control"/>
+                            </div>
+
+
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text mr-3">
+
+                                    </div>
+                                </div>
+                                <input type="text" name="temp" required id="temp" placeholder="ENTER TEMPERATURE" class="form-control"/>
+                            </div>
+
+
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text mr-3">
+
+                                    </div>
+                                </div>
+                                <input type="text" name="weight" required id="weight" placeholder="ENTER WEIGHT" class="form-control"/>
+                            </div>
+
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text mr-3">
+
+                                    </div>
+                                </div>
+                                <input type="text" name="iindate" required id="iindate" placeholder="ENTER IN PATIENT IN DATE" class="form-control"/>
+                            </div>
+
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text mr-3">
+
+                                    </div>
+                                </div>
+                                <input type="text" name="oindate" required id="oindate" placeholder="ENTER IN PATIENT OUT DATE" class="form-control"/>
+                            </div>
+
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text mr-3">
+
+                                    </div>
+                                </div>
+                                <input type="text" name="odate" required id="odate" placeholder="ENTER OUT PATIENT DATE" class="form-control"/>
+                            </div>
+
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text mr-3">
+
+                                    </div>
+                                </div>
+                                <input type="text" name="treatcharges" required id="treatcharges" placeholder="ENTER TREATMENT CHARGES" class="form-control"/>
+                            </div>
+
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text mr-3">
+
+                                    </div>
+                                </div>
+                                <input type="text" name="medcharges" required id="medcharges" placeholder="ENTER MEDICAL CHARGES" class="form-control"/>
+                            </div>
+
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text mr-3">
+
+                                    </div>
+                                </div>
+                                <input type="text" name="roomcharges" required id="roomcharges" placeholder="ENTER ROOMCHARGES" class="form-control"/>
+                            </div>
+
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text mr-3">
+
+                                    </div>
+                                </div>
+                                <input type="text" name="treatment" required id="treatment" placeholder="ENTER TREATMENT" class="form-control"/>
+                            </div>
+
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text mr-3">
+
+                                    </div>
+                                </div>
+                                <input type="text" name="prescription" required id="prescription" placeholder="ENTER PRESCRIPTION" class="form-control"/>
+                            </div>
+
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text mr-3">
+
+                                    </div>
+                                </div>
+                                <input type="text" name="staffid" required id="staffid" placeholder="ENTER STAFF ID" class="form-control"/>
+                            </div>
+
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text mr-3">
+
+                                    </div>
+                                </div>
+                                <input type="text" name="patientid" required id="patientid" placeholder="ENTER PATIENT ID" class="form-control"/>
+                            </div>
+
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text mr-3">
+
+                                    </div>
+                                </div>
+                                <input type="text" name="roomno" required id="roomno" placeholder="ENTER ROOM NUMBER" class="form-control"/>
+                            </div>
+
+                            <div class="container">
+                                <button>SAVE MEDICAL REPORT AND BILL</button>
+                            </div>
+
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+</section>
+
+</body>
+</html>
